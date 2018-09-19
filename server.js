@@ -12,7 +12,7 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
-var PORT = 5000;
+var PORT = 3000;
 
 // Initialize Express
 var app = express();
@@ -30,16 +30,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var CONNECTION_URI = process.env.MONGODB_URI || "mongodb://localhost/webscraper";
+//var CONNECTION_URI = process.env.MONGODB_URI || "mongodb://localhost/webscraper";
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
-mongoose.Promise = Promise;
-mongoose.connect(CONNECTION_URI, {useMongoClient: true});
+//mongoose.Promise = Promise;
+//mongoose.connect(CONNECTION_URI, {useMongoClient: true});
 
 
 // Connect to the Mongo DB
-//mongoose.connect("mongodb://localhost/webscraper");
+mongoose.connect("mongodb://localhost/webscraper");
 
 // Routes
 
