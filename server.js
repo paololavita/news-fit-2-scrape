@@ -12,6 +12,7 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
+// Connect to Port on Heroku using env variable or local instance
 var PORT = process.env.PORT || 3000;
 
 // Initialize Express
@@ -31,7 +32,6 @@ app.use(express.static("public"));
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/webscraper";
-//var MONGODB_URI = "mongodb://heroku_rp0f279v:fisu5g52gs7lbvrj2v3jkcttqe@ds261302.mlab.com:61302/heroku_rp0f279v" || "mongodb://localhost/webscraper";
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
