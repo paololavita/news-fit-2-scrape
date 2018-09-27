@@ -40,7 +40,7 @@ mongoose.connect(MONGODB_URI);
 
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/webscraper");
+//mongoose.connect("mongodb://localhost/webscraper");
 
 // Routes
 
