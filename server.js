@@ -32,7 +32,7 @@ var MONGODB_URI = "mongodb://heroku_rp0f279v:fisu5g52gs7lbvrj2v3jkcttqe@ds261302
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
-mongoose.Promise = Promise;
+//mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
 
